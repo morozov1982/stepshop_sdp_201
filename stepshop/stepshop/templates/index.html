@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +14,7 @@
     <title>Pixie - Ecommerce HTML5 Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/static/stepshop/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'stepshop/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
@@ -45,18 +47,18 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home
+              <a class="nav-link" href="{% url 'index' %}">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">Products</a>
+              <a class="nav-link" href="{% url 'products:index' %}">Products</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contacts/">Contact Us</a>
+              <a class="nav-link" href="{% url 'contacts' %}">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -250,9 +252,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="copyright-text">
-              <p>Copyright &copy; 2019 Company Name 
-                
-                - Design: <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>
+              <p>Copyright &copy; 2019&ndash;{% now "Y" %} Бобёр inc.</p>
             </div>
           </div>
         </div>
