@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Pixie - Ecommerce HTML5 Template</title>
+    <title>{% block title %}PageName{% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'stepshop/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -21,6 +21,12 @@
     <link rel="stylesheet" href="{% static 'stepshop/css/fontawesome.css' %}">
     <link rel="stylesheet" href="{% static 'stepshop/css/tooplate-main.css' %}">
     <link rel="stylesheet" href="{% static 'stepshop/css/owl.css' %}">
+
+    {% block css %}
+    {% endblock %}
+
+    {% block js %}
+    {% endblock %}
 
   </head>
 
@@ -37,33 +43,7 @@
       </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-      <div class="container">
-        <a class="navbar-brand" href="#"><img src="{% static 'stepshop/images/header-logo.png' %}" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'index' %}">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'products:index' %}">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'contacts' %}">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    {% include 'stepshop/includes/inc_main_menu.html' %}
 
     {% block content %}
       HTML из base.html
