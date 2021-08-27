@@ -80,11 +80,12 @@ a {
 	border-bottom: 1px solid #eee;
 }
 #navbarResponsive {
+    justify-content: center;
 	z-index: 999;
-	position: absolute;
+	/*position: absolute;
 	left: 50%;
 	top: 105px;
-	transform: translateX(-50%);
+	transform: translateX(-50%);*/
 }
 .navbar-dark .navbar-nav .nav-item {
 	margin: 0px 15px;
@@ -103,7 +104,7 @@ a {
 .navbar-dark .navbar-nav .show>.nav-link {
 	color: #3a8bcd;
 }
-.navbar:after {
+/*.navbar:after {
 	width: 100%;
 	height: 1px;
 	background-color: #eee;
@@ -111,7 +112,7 @@ a {
 	position: absolute;
 	left: 0;
 	bottom: -52px;
-}
+}*/
 .navbar-dark .navbar-toggler-icon {
 	background-image: none;
 }
@@ -130,7 +131,7 @@ a {
 }
 /* Banner Style */
 .banner {
-	margin-top: 50px;
+	/*margin-top: 50px;*/
 	background-image: url(../images/banner-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -345,7 +346,7 @@ a {
 
 /* Featured Page Style */
 .featured-page {
-	margin-top: 130px;
+	margin-top: 80px;/*130px;*/
 	margin-bottom: 40px;
 }
 .featured-page .section-heading {
@@ -562,7 +563,7 @@ a {
 
 /* About Us Style */
 .about-page {
-	margin-top: 50px;
+	/*margin-top: 50px;*/
     margin-bottom: 80px;
 }
 .about-page .right-content h4 {
@@ -610,7 +611,7 @@ a {
 
 /* Contact Page Style */
 .contact-page {
-	margin-top: 50px;
+	/*margin-top: 50px;*/
     margin-bottom: 80px;
 }
 .contact-page .right-content input,
@@ -696,6 +697,7 @@ a {
 		display: none;
 	}
 	#navbarResponsive {
+        justify-content: center;
 	    z-index: 99999;
 	    position: absolute;
 	    top: 96px;
